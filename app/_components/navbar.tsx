@@ -1,10 +1,13 @@
 import Link from "next/link";
 import Container from "./ui/container";
 import MainNav from "./main-nav";
+import getCategories from "@/actions/get-categories";
 
 type Props = {};
 
-const Navbar = (props: Props) => {
+const Navbar = async (props: Props) => {
+  const categories = await getCategories();
+
   return (
     <div className="border-b">
       <Container>
@@ -12,7 +15,7 @@ const Navbar = (props: Props) => {
           <Link href="/" className="ml-4 flex lg:ml-0 gap-x-2">
             <p className="font-bold text-xl">Store</p>
           </Link>
-          <MainNav data={[]} />
+          <MainNav data={categories} />
         </div>
       </Container>
     </div>
