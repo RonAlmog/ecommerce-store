@@ -2,6 +2,7 @@ import getBillboard from "@/actions/get-billboard";
 import getProducts from "@/actions/get-products";
 import Billboard from "@/components/billboard";
 import Container from "@/components/container";
+import ProductList from "@/components/product-list";
 
 // no cach!
 export const revalidate = 0;
@@ -15,7 +16,7 @@ const HomePage = async () => {
         <Billboard data={billboard} />
       </div>
       <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8">
-        <ProductList />
+        <ProductList title="Featured Products" items={products} />
       </div>
     </Container>
   );
