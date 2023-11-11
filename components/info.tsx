@@ -2,12 +2,20 @@ import { Product } from "@/types";
 import Currency from "./currency";
 import { Button } from "./ui/button";
 import { ShoppingCart } from "lucide-react";
+import useCart from "@/hooks/use-cart";
+import { MouseEventHandler } from "react";
 
 interface InfoProps {
   data: Product;
 }
 
 const Info = ({ data }: InfoProps) => {
+  //const cart = useCart();
+
+  //   const addToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
+  //     event.stopPropagation();
+  //     cart.addItem(data);
+  //   };
   return (
     <div>
       <h1 className="text-3xl font-bold text-gray-900">{data.name}</h1>
