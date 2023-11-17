@@ -27,7 +27,7 @@ const CartItem = ({ data }: CartItemProps) => {
           className="object-cover object-center"
         />
       </div>
-      <div className="relative ml-4 flex flex-1 flex-col justify-between sm:ml-6 border border-slate-800">
+      <div className="relative ml-4 flex flex-1 flex-col justify-between sm:ml-6">
         <div className="absolute z-10 right-0 top-0">
           <Button size="icon" variant="secondary" onClick={removeItem}>
             <X size={15} />
