@@ -53,6 +53,7 @@ const Summary = () => {
         size="default"
         variant="default"
         className="w-full mt-6"
+        disabled={items.length === 0}
       >
         Checkout
       </Button>
